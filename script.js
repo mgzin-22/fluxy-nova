@@ -40,6 +40,7 @@ function getSession() {
 
 function showMessage(text, type = "success") {
   if (!messageBox) return;
+
   messageBox.hidden = false;
   messageBox.className = `message ${type}`;
   messageBox.textContent = text;
@@ -47,6 +48,7 @@ function showMessage(text, type = "success") {
 
 function clearMessage() {
   if (!messageBox) return;
+
   messageBox.hidden = true;
   messageBox.className = "message";
   messageBox.textContent = "";
@@ -56,15 +58,19 @@ function setActiveTab(mode) {
   if (!isAuthPage) return;
 
   const isLogin = mode === "login";
+
   tabLogin.classList.toggle("is-active", isLogin);
   tabRegister.classList.toggle("is-active", !isLogin);
+
   tabLogin.setAttribute("aria-selected", String(isLogin));
   tabRegister.setAttribute("aria-selected", String(!isLogin));
 
   panelLogin.classList.toggle("is-active", isLogin);
   panelRegister.classList.toggle("is-active", !isLogin);
+
   panelLogin.hidden = !isLogin;
   panelRegister.hidden = isLogin;
+
   clearMessage();
 }
 
@@ -116,7 +122,9 @@ if (isAuthPage) {
     }
 
     const users = readUsers();
-    const userExists = users.some((user) => user.email.toLowerCase() === data.email.toLowerCase());
+    const userExists = users.some(
+      (user) => user.email.toLowerCase() === data.email.toLowerCase()
+    );
 
     if (userExists) {
       showMessage("Este e-mail já está cadastrado.", "error");
@@ -142,7 +150,10 @@ if (isAuthPage) {
 
     const data = Object.fromEntries(new FormData(loginForm));
     const users = readUsers();
-    const user = users.find((item) => item.email === data.email.trim().toLowerCase());
+
+    const user = users.find(
+      (item) => item.email === data.email.trim().toLowerCase()
+    );
 
     if (!user || user.password !== data.password) {
       showMessage("E-mail ou senha inválidos.", "error");
@@ -155,11 +166,13 @@ if (isAuthPage) {
     loginForm.reset();
   });
 
-  logoutBtn.addEventListener("click", () => {
-    clearSession();
-    refreshSessionUI();
-    showMessage("Sessão encerrada com sucesso.", "success");
-  });
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      clearSession();
+      refreshSessionUI();
+      showMessage("Sessão encerrada com sucesso.", "success");
+    });
+  }
 
   tabLogin.addEventListener("click", () => setActiveTab("login"));
   tabRegister.addEventListener("click", () => setActiveTab("register"));
@@ -168,9 +181,9 @@ if (isAuthPage) {
   setActiveTab("login");
 }
 
-
 function initHomeEffects() {
   const splash = document.getElementById("splash");
+
   if (splash) {
     window.setTimeout(() => {
       splash.classList.add("hidden");
@@ -178,6 +191,7 @@ function initHomeEffects() {
   }
 
   const revealItems = document.querySelectorAll(".reveal");
+
   if (!revealItems.length || !("IntersectionObserver" in window)) {
     revealItems.forEach((item) => item.classList.add("active"));
     return;
