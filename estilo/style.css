@@ -289,3 +289,18 @@ footer { padding: var(--space-5) 0; border-top: 1px solid var(--glass-border); t
     grid-template-columns: 1fr;
   }
 }
+
+.logo-nav {
+  height: 42px;
+  width: auto;
+}
+
+.logo-footer {
+  height: 36px;
+  width: auto;
+}
+
+.logo-splash {
+  width: min(420px, 80vw);
+  height: auto;
+}

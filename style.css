@@ -156,3 +156,8 @@ input:focus {
   justify-content: space-between;
   gap: 1rem;
 }
+
+.logo-auth {
+  width: min(280px, 75vw);
+  height: auto;
+}
