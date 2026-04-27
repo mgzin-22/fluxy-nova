@@ -185,7 +185,7 @@ function initHomeEffects() {
   const splash = document.getElementById("splash");
 
   if (splash) {
-    window.setTimeout(() => {
+    setTimeout(() => {
       splash.classList.add("hidden");
     }, 900);
   }

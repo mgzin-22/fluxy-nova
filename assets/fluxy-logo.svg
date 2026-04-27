@@ -1,0 +1,23 @@
+<svg width="420" height="120" viewBox="0 0 420 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#37E2FF"/>
+      <stop offset="100%" stop-color="#14A8E5"/>
+    </linearGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A2A66"/>
+      <stop offset="100%" stop-color="#07163F"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M18 25 C45 40, 70 5, 105 20 C132 33, 154 20, 176 13 C161 37, 137 49, 110 44 C83 39, 62 47, 39 53 C27 56, 16 52, 8 45 C12 45, 14 45, 18 45" fill="url(#wave)"/>
+  <path d="M16 52 C44 67, 68 34, 103 48 C130 60, 152 48, 176 41 C163 63, 138 77, 109 71 C83 66, 62 75, 36 81 C23 84, 10 79, 2 70 C8 70, 12 70, 16 70" fill="url(#wave)"/>
+  <path d="M17 80 C45 95, 69 61, 104 76 C132 89, 155 76, 178 69 C162 93, 137 107, 108 101 C81 95, 61 104, 35 110 C22 113, 10 108, 2 99 C8 99, 12 99, 17 99" fill="url(#wave)"/>
+
+  <g fill="url(#word)">
+    <path d="M208 26h35v8h-26v17h24v8h-24v31h-9V26z"/>
+    <path d="M255 26h9v41c0 10 5 17 15 17 10 0 15-7 15-17V26h9v41c0 15-9 25-24 25s-24-10-24-25V26z"/>
+    <path d="M314 46h9v12c0 16 7 26 19 26 6 0 11-2 15-5l4 7c-5 4-12 6-20 6-18 0-27-14-27-34V46z"/>
+    <path d="M362 46h10l16 19 16-19h10l-21 24 21 24h-10l-16-19-16 19h-10l21-24-21-24z"/>
+  </g>
+</svg>

@@ -32,9 +32,9 @@ body {
   padding: 2rem 0;
 }
 
-.auth-hero h1 {
-  margin: 0;
-  font-size: clamp(2rem, 6vw, 3rem);
+.logo-auth {
+  width: min(280px, 75vw);
+  height: auto;
 }
 
 .auth-hero p {
@@ -115,6 +115,9 @@ input:focus {
   color: #fff;
   background: var(--primary);
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
 .btn:hover {
