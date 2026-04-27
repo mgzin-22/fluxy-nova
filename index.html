@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/home.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -22,8 +22,7 @@
   <div id="splash">
     <div class="splash-bg"></div>
     <div class="splash-logo">
-      <i data-lucide="droplets" width="48" height="48"></i>
-      Fluxy
+      <img src="assets/fluxy-logo.svg" alt="Fluxy" class="logo-splash" />
     </div>
   </div>
 
@@ -31,8 +30,7 @@
   <nav class="navbar">
     <div class="wrap nav-wrap">
       <div class="nav-logo">
-        <i data-lucide="droplets" width="28" height="28" color="var(--primary)"></i>
-        Fluxy
+        <img src="assets/fluxy-logo.svg" alt="Fluxy" class="logo-nav" />
       </div>
       <div class="nav-links">
         <a href="#home">Home</a>
@@ -41,8 +39,8 @@
         <a href="#planos">Planos</a>
       </div>
       <div class="nav-actions">
-        <button class="btn btn-glass">Entrar</button>
-        <button class="btn btn-primary">Criar conta</button>
+        <a class="btn btn-glass" href="auth.html">Entrar</a>
+        <a class="btn btn-primary" href="auth.html">Criar conta</a>
       </div>
     </div>
   </nav>
@@ -53,7 +51,7 @@
       <h1 class="t-display">O <em>fluxo perfeito</em> para gerenciar seu negócio.</h1>
       <p class="t-sub" style="max-width: 480px;">Controle de vendas, estoque e clientes em uma única plataforma financeira. Clareza e simplicidade para pequenos empreendedores.</p>
       <div class="hero-cta">
-        <button class="btn btn-primary">Começar agora</button>
+        <a class="btn btn-primary" href="auth.html">Começar agora</a>
         <button class="btn btn-glass">Ver demonstração</button>
       </div>
     </div>
@@ -95,6 +93,33 @@
       </div>
     </div>
   </header>
+
+
+
+  <!-- About / Social Proof -->
+  <section id="sobre" class="about wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <h2 class="t-heading">Feito para quem empreende de verdade.</h2>
+        <p class="t-sub">A Fluxy centraliza vendas, estoque e clientes em uma visão prática do dia a dia para você tomar decisões rápidas.</p>
+        <div class="about-badges">
+          <span>+1.200 negócios ativos</span>
+          <span>R$ 38 mi processados</span>
+          <span>Suporte em português</span>
+        </div>
+      </div>
+      <div class="about-metrics reveal" style="transition-delay:0.15s;">
+        <article>
+          <strong>87%</strong>
+          <p>dos usuários relatam mais organização financeira no 1º mês.</p>
+        </article>
+        <article>
+          <strong>3h/semana</strong>
+          <p>economizadas com automações de rotina.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <!-- Features Section -->
   <section id="servicos" class="features wrap">
@@ -145,7 +170,7 @@
           <li><i data-lucide="check" width="18" color="var(--primary)"></i> Relatórios mensais</li>
           <li style="color:var(--dim);"><i data-lucide="x" width="18"></i> Suporte prioritário</li>
         </ul>
-        <button class="btn btn-glass" style="width:100%; margin-top:24px;">Criar conta grátis</button>
+        <a class="btn btn-glass" style="width:100%; margin-top:24px;" href="auth.html">Criar conta grátis</a>
       </div>
       
       <div class="plan-card highlight">
@@ -177,11 +202,41 @@
     </div>
   </section>
 
+
+
+  <section class="testimonials wrap">
+    <div class="reveal" style="text-align:center; max-width:700px; margin:0 auto;">
+      <h2 class="t-heading">Quem usa, recomenda.</h2>
+      <p class="t-sub">Resultados reais de pequenos negócios usando Fluxy no dia a dia.</p>
+    </div>
+    <div class="testimonials-grid">
+      <article class="testimonial-card reveal" style="transition-delay:0.1s;">
+        <p>“Antes eu controlava tudo em planilha. Hoje tenho visão do caixa em segundos.”</p>
+        <strong>Ana, Loja de Roupas</strong>
+      </article>
+      <article class="testimonial-card reveal" style="transition-delay:0.2s;">
+        <p>“Conseguimos reduzir falta de estoque e vender mais no WhatsApp.”</p>
+        <strong>Rafael, Mercado de Bairro</strong>
+      </article>
+      <article class="testimonial-card reveal" style="transition-delay:0.3s;">
+        <p>“A equipe aprendeu rápido e os relatórios facilitaram nossas decisões.”</p>
+        <strong>Patrícia, Cafeteria</strong>
+      </article>
+    </div>
+  </section>
+
+  <section class="final-cta wrap reveal">
+    <h2>Pronto para simplificar sua operação?</h2>
+    <p>Crie sua conta em menos de 2 minutos e comece grátis.</p>
+    <a class="btn btn-primary" href="auth.html">Criar conta agora</a>
+  </section>
+
+
   <!-- Footer -->
   <footer class="wrap">
     <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--space-3);">
       <div class="nav-logo">
-        <i data-lucide="droplets" width="24" height="24" color="var(--primary)"></i> Fluxy
+        <img src="assets/fluxy-logo.svg" alt="Fluxy" class="logo-footer" />
       </div>
       <div>&copy; 2026 Fluxy App. Todos os direitos reservados.</div>
     </div>
